@@ -1,8 +1,12 @@
 package com.bitacora.service.repositorio;
 
 import com.bitacora.service.entidad.Bitacora;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface BitacoraRepository extends JpaRepository<Bitacora, Integer>{
+@EnableScan
+@Repository
+public interface BitacoraRepository extends CrudRepository<Bitacora, String>{
     
 }

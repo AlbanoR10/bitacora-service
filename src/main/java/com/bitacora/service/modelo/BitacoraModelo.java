@@ -13,11 +13,12 @@ public class BitacoraModelo {
     @Autowired
     BitacoraRepository bitacoraRepository;
 
-    public List<Bitacora> getAll() {
+    public Iterable<Bitacora> getAll() {
         return bitacoraRepository.findAll();
+
     }
 
-    public Bitacora getBitacoraById(int d) {
+    public Bitacora getBitacoraById(String d) {
         return bitacoraRepository.findById(d).orElse(null);
     }
 
